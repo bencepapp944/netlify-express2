@@ -10,7 +10,9 @@ router.get('/', (req, res) => {
   res.write('<h1>Hello from Express.jsassasasss!</h1>');
   res.end();
 });
-router.get('/another', (req, res) => res.json({ route: req.originalUrl }));
+
+router.get('/picture', (req, res) => res.json({ picture:"altImage" }));
+
 router.post('/', (req, res) => res.json({ postBody: req.body }));
 
 app.use(bodyParser.json());
