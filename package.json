@@ -21,7 +21,9 @@
     "url": "https://github.com/neverendingqs/netlify-express/issues"
   },
   "homepage": "https://github.com/neverendingqs/netlify-express#readme",
-  "dependencies": {},
+  "dependencies": {
+    "passport-netlify": "0.0.5"
+  },
   "devDependencies": {
     "body-parser": "^1.18.3",
     "eslint": "^5.16.0",

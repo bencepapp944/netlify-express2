@@ -1,28 +1,19 @@
 'use strict';
 const express = require('express');
 const serverless = require('serverless-http');
-const bodyParser = require('body-parser');
-
-
+const path = require("path");
 const app = express();
 
-app.use(bodyParser.json());
+// eslint-disable-next-line no-undef
+app.use('/login', express.static(path.join(__dirname,'../public')));
 
-app.get('/', (req, res) => {
-  
- 
-
-  res.send('<h1>Hello World!</h1>');
-
-});
+console.log(path.join(__dirname,'../public'));
 
 app.get('/picture', (req, res) => {
 
   res.send("This is a picture.")
 
 });
-
-app.post('/', (req, res) => res.json({ postBody: req.body }));
 
 module.exports = app;
 module.exports.handler = serverless(app);
