@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/neverendingqs/netlify-express#readme",
   "dependencies": {
+    "morgan": "^1.9.1",
     "passport-netlify": "0.0.5"
   },
   "devDependencies": {

@@ -3,8 +3,10 @@ const express = require('express');
 const serverless = require('serverless-http');
 const path = require("path");
 const app = express();
+const morgan = require('morgan');
 
 // eslint-disable-next-line no-undef
+app.use(morgan())
 app.use('/login', express.static(path.join(__dirname,'../public')));
 
 console.log(path.join(__dirname,'../public'));
